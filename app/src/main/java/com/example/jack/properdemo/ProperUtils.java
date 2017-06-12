@@ -21,6 +21,7 @@ public class ProperUtils {
             InputStream in = new BufferedInputStream(new FileInputStream(file));
             mainprop.load(in);///加载属性列表
             modleProp = getPropertiesByType(mainprop,"setEnvironment");
+            Log.d("getPropertiesByType","modleProp="+modleProp);
             model = getPropertiesByType(mainprop,"setCmdToNative");
             setEnvOrCmd(modleProp);
             setEnvOrCmd(model);
